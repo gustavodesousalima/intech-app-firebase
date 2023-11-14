@@ -1,0 +1,111 @@
+.container_Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    height: auto;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+    gap: 12px;
+}
+
+.user > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 4px solid #c02121;
+    margin: 2%;
+}
+
+.title_Name_User{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button_Entry{
+    display: flex;
+    border: 2px solid #c02121;
+    color: #c02121;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    width: 100%;
+    height: 5vh;
+    cursor: pointer;
+}
+.button_Entry:hover{
+    background-color: #c02121;
+    color: #000000;
+}
+
+.container_Button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.title_Button{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text_Apresentation {
+    width: 50%;
+    color: #a3a3a3;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    gap: 5%;
+    width: 18vw;
+    height: 6vh;
+    cursor: pointer;
+}
+.button:hover {
+    border: 2px solid #c02121;
+}
+
+.link {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width:480px){
+    .container_Login > img{
+        width: 250px;
+        height: 100px;
+    }
+    
+    .user{
+        width: 55vw;
+    }
+
+    .button_Entry{
+        height: 5vh;
+    }
+
+    .text_Apresentation{
+        width: 80vw;
+    }
+
+    .button {
+        width: 80%;
+    }
+}
