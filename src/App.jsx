@@ -1,5 +1,5 @@
 import { AuthProvider } from "./context/authContext";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter} from "react-router-dom";
 import { ROUTES } from './constants/routes';
 import LoginPage from './pages/login/LoginPage';
 // import FeedPage from './pages/feed/FeedPage';
@@ -16,6 +16,7 @@ function App() {
         </Routes>
       </AuthProvider>
     </BrowserRouter>
+
   )
 }
 

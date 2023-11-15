@@ -1,4 +1,4 @@
 export const ROUTES = {
-    LOGIN: "/",
+    LOGIN: "/app-intech/",
     FEED: "/feed"
 };
