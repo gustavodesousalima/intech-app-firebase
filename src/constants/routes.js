@@ -1,4 +1,4 @@
 export const ROUTES = {
-    LOGIN: "/appintech/",
+    LOGIN: "/appintech",
     FEED: "/feed"
 };

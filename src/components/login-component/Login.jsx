@@ -25,7 +25,7 @@ const Login = () => {
         
         if (error.message && error.message.includes('net::ERR_INTERNET_DISCONNECTED')) {
         
-          window.location.href = ROUTES.LOGIN; 
+          history.pushState = ROUTES.LOGIN; 
         }
       });
   }
