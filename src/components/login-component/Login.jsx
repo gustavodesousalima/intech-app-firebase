@@ -6,7 +6,7 @@ import { ROUTES } from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import  ImgLogo  from '../../assets/intechlogo1.png';
+import ImgLogo from '../../assets/intechlogo.png';
 import './login.css';
 
 const Login = () => {
@@ -22,17 +22,17 @@ const Login = () => {
       .catch((error) => {
         console.log(error);
 
-        
+
         if (error.message && error.message.includes('net::ERR_INTERNET_DISCONNECTED')) {
-        
-          history.pushState = ROUTES.LOGIN; 
+
+          history.pushState = ROUTES.LOGIN;
         }
       });
   }
 
   return (
     <div className="container_Login">
-      <img src={ImgLogo} width={450} height={130}/>
+      <img src={ImgLogo} width={450} height={130} />
       <Typerwriter strings={['Explore o Universo Tech com Intech']} />
       {user && user.photoURL ? (
         <div className='user'>
@@ -45,8 +45,8 @@ const Login = () => {
         <div className='container_Button'>
           <h3 className='title_Button'>Acesse sua conta</h3>
           <p className='text_Apresentation'>Seja bem-vindo à InTech, sua
-              comunidade tech de excelência! Junte-se a nós para explorar o
-              universo da tecnologia e conectar-se com mentes inovadoras.</p>
+            comunidade tech de excelência! Junte-se a nós para explorar o
+            universo da tecnologia e conectar-se com mentes inovadoras.</p>
           <p type="button" className='button' onClick={handleGoogleSignIn}>
             <FontAwesomeIcon icon={faGoogle} />
             <button className='link'>Entrar com Google</button>
