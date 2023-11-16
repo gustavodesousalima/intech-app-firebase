@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/login/LoginPage';
 import FeedPage from './pages/feed/FeedPage';
 import { AuthProvider } from './context/authContext';
@@ -8,12 +8,12 @@ import './App.css';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path={ROUTES.LOGIN} element={<LoginPage />} />
           <Route path={ROUTES.FEED} element={<FeedPage />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </AuthProvider>
   );
 }
