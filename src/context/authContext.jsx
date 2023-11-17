@@ -1,9 +1,9 @@
-// context/AuthContext.js
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
-// eslint-disable-next-line react/prop-types
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 
@@ -16,14 +16,13 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{user, signIn, signOut}}>
+        <AuthContext.Provider value={{ user, signIn, signOut }}>
             {children}
         </AuthContext.Provider>
     );
 }
 
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
     return useContext(AuthContext);
 }

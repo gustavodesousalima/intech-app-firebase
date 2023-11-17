@@ -3,7 +3,6 @@ import LoginPage from './pages/login/LoginPage';
 import FeedPage from './pages/feed/FeedPage';
 import { AuthProvider } from './context/authContext';
 import { ROUTES } from './constants/routes'
-import './App.css';
 
 function App() {
   return (

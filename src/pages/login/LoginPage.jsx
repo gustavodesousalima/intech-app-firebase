@@ -2,9 +2,9 @@ import './loginPage.css'
 import Login from '../../components/login-component/Login'
 
 const LoginPage = () => {
-    return(
+    return (
         <div className='container_Page'>
-        <Login />
+            <Login />
         </div>
     )
 }

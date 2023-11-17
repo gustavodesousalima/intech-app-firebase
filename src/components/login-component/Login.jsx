@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
+import { auth } from '../../services/firebase';
+import { ROUTES } from '../../constants/routes';
 import { useAuth } from '../../context/authContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../../services/firebase';
-import Typerwriter from '../typewriter-component/Typerwriter';
-import { ROUTES } from '../../constants/routes';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Typerwriter from '../typewriter-component/Typerwriter';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import ImgLogo from '../../assets/intechlogo.png';
 import './login.css';
@@ -18,13 +18,12 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         signIn(result.user);
+        console.log(result.user)
       })
       .catch((error) => {
         console.log(error);
 
-
         if (error.message && error.message.includes('net::ERR_INTERNET_DISCONNECTED')) {
-
           history.pushState = ROUTES.LOGIN;
         }
       });
@@ -33,7 +32,7 @@ const Login = () => {
   return (
     <div className="container_Login">
       <img src={ImgLogo} width={450} height={130} />
-      <Typerwriter strings={['Explore o Universo Tech com Intech']} />
+      <Typerwriter strings={['Explore o Universo Tech com a Intech']} />
       {user && user.photoURL ? (
         <div className='user'>
           <img src={user.photoURL} alt="Foto do usuário" />

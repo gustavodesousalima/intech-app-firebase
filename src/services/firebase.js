@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
+import {getAuth, setPersistence, browserSessionPersistence} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -17,11 +17,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 setPersistence(auth, browserSessionPersistence)
-  .then(() => {
-  
-  })
+  .then(() => {})
   .catch((error) => {
-    console.error('Erro ao definir persistência:', error);
+    console.error("Erro ao definir persistência:", error);
   });
 
 const db = getFirestore(app);
