@@ -8,27 +8,39 @@ Publicação de Imagens: Os usuários podem compartilhar imagens relacionadas a 
 
 ### Tecnologias Utilizadas
 ReactJS: Biblioteca JavaScript para construção de interfaces de usuário.
+
 Vite: Ferramenta de construção de projetos web rápida e eficiente.
+
 Firebase: Plataforma de desenvolvimento de aplicativos que fornece infraestrutura de backend como serviço.
+
 Typerwriter-effect: Uma biblioteca que simula o efeito de uma máquina de escrever.
 
 ### Próximos Passos
 O projeto INTECH está em constante evolução, e os próximos passos incluem a implementação de novas funcionalidades e aprimoramentos, tais como:
 
 Interatividade Avançada: Adição de recursos de interação, como curtidas, comentários e compartilhamentos.
+
 Divulgação de Eventos: Implementação de uma seção para divulgação de eventos relacionados à tecnologia.
+
 Vagas de Emprego: Desenvolvimento de um espaço dedicado para a divulgação e busca de oportunidades de emprego na área de tecnologia.
+
 Melhorias de Design e Usabilidade: Aprimoramento da experiência do usuário por meio de melhorias no design e na usabilidade da plataforma.
 
 ### Como Contribuir
 Sua contribuição é bem-vinda! Se deseja contribuir para o desenvolvimento da INTECH, siga os passos abaixo:
 
-Faça um fork do repositório.
+Faça um fork do repositório
+
 Crie uma branch para a sua contribuição (git checkout -b feature/nova-feature).
+
 Faça as alterações desejadas.
+
 Faça o commit das suas alterações (git commit -m 'Adiciona nova feature').
+
 Faça o push da sua branch (git push origin feature/nova-feature).
+
 Abra um Pull Request no repositório original.
+
 ### Contato
 Para mais informações ou dúvidas, entre em contato conosco:
 
