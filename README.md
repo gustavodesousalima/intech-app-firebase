@@ -29,8 +29,9 @@ Faça as alterações desejadas.
 Faça o commit das suas alterações (git commit -m 'Adiciona nova feature').
 Faça o push da sua branch (git push origin feature/nova-feature).
 Abra um Pull Request no repositório original.
-Contato
+### Contato
 Para mais informações ou dúvidas, entre em contato conosco:
 
 Email: gustavdesousalima@gmail.com
+
 Obrigado por contribuir para a INTECH!
