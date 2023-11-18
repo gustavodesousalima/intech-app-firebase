@@ -10,7 +10,7 @@ Publicação de Imagens: Os usuários podem compartilhar imagens relacionadas a 
 ReactJS: Biblioteca JavaScript para construção de interfaces de usuário.
 Vite: Ferramenta de construção de projetos web rápida e eficiente.
 Firebase: Plataforma de desenvolvimento de aplicativos que fornece infraestrutura de backend como serviço.
-Typerwriter: (Assumindo que seja um erro de digitação e quis dizer TypeScript) - Superset de JavaScript que adiciona tipagem estática ao código.
+Typerwriter-effect: Uma biblioteca que simula o efeito de uma máquina de escrever.
 
 ### Próximos Passos
 O projeto INTECH está em constante evolução, e os próximos passos incluem a implementação de novas funcionalidades e aprimoramentos, tais como:
