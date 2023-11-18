@@ -1,18 +1,18 @@
-#INTECH - Rede Social para Profissionais de Tecnologia
+# INTECH - Rede Social para Profissionais de Tecnologia
 
-##Descrição do Projeto
+## Descrição do Projeto
 INTECH é uma rede social voltada para profissionais do mundo da tecnologia, proporcionando um espaço dedicado para interação, compartilhamento de projetos, ideias, divulgação de eventos e oportunidades de emprego. Atualmente em fase de desenvolvimento, a plataforma já conta com a funcionalidade básica de publicação de imagens acompanhadas de comentários.
 
-###Funcionalidades Atuais
+### Funcionalidades Atuais
 Publicação de Imagens: Os usuários podem compartilhar imagens relacionadas a projetos, eventos ou outros assuntos relevantes da área de tecnologia, juntamente com comentários.
 
-###Tecnologias Utilizadas
+### Tecnologias Utilizadas
 ReactJS: Biblioteca JavaScript para construção de interfaces de usuário.
 Vite: Ferramenta de construção de projetos web rápida e eficiente.
 Firebase: Plataforma de desenvolvimento de aplicativos que fornece infraestrutura de backend como serviço.
 Typerwriter: (Assumindo que seja um erro de digitação e quis dizer TypeScript) - Superset de JavaScript que adiciona tipagem estática ao código.
 
-###Próximos Passos
+### Próximos Passos
 O projeto INTECH está em constante evolução, e os próximos passos incluem a implementação de novas funcionalidades e aprimoramentos, tais como:
 
 Interatividade Avançada: Adição de recursos de interação, como curtidas, comentários e compartilhamentos.
@@ -20,7 +20,7 @@ Divulgação de Eventos: Implementação de uma seção para divulgação de eve
 Vagas de Emprego: Desenvolvimento de um espaço dedicado para a divulgação e busca de oportunidades de emprego na área de tecnologia.
 Melhorias de Design e Usabilidade: Aprimoramento da experiência do usuário por meio de melhorias no design e na usabilidade da plataforma.
 
-###Como Contribuir
+### Como Contribuir
 Sua contribuição é bem-vinda! Se deseja contribuir para o desenvolvimento da INTECH, siga os passos abaixo:
 
 Faça um fork do repositório.
