@@ -18,7 +18,6 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         signIn(result.user);
-        console.log(result.user)
       })
       .catch((error) => {
         console.log(error);
