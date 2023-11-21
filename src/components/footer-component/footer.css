@@ -16,7 +16,7 @@
 
 @media screen and (max-width:480px) {
     .container_Footer {
-        height: 5vh;
+        display: none;
     }
 
     .container_Footer p {

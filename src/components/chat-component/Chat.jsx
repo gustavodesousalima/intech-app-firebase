@@ -49,7 +49,7 @@ const ChatContainer = () => {
       
       {loggedUser && (
         <div className='container_Chat'>
-          <h3>Chats:</h3>
+          
          
           <ChatList usuarioLogadoId={loggedUser.user.uid} />
         </div>

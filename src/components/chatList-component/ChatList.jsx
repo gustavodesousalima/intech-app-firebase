@@ -39,18 +39,35 @@ const ChatList = ({ usuarioLogadoId }) => {
     setSelectedChatId(chatId);
   };
 
+  const handleElementClick = (clickedChatId) => {
+    const participants = document.querySelectorAll('.participant');
+  
+    participants.forEach((participant) => {
+      participant.classList.remove('clicked');
+    });
+  
+    const clickedElement = document.querySelector(`.participant[data-chat-id="${clickedChatId}"]`);
+    if (clickedElement) {
+      clickedElement.classList.add('clicked');
+    }
+  
+    handleChatClick(clickedChatId);
+  };
+  
+
   return (
     <div className='container_ChatList'>
       <div className='container_chatParticipants'>
         <h3>Chats</h3>
         {chats.map((chat) => (
-          <div key={chat.id} onClick={() => handleChatClick(chat.id)} style={{ cursor: 'pointer' }}>
-            <p>Chat com: {chat.otherParticipantName}</p>
+          <div className={`participant ${chat.id === selectedChatId ? 'clicked' : 'noClicked'}`} key={chat.id} onClick={() => {handleChatClick(chat.id); handleElementClick(chat.id)}} style={{ cursor: 'pointer' }}>
+            <p>{chat.otherParticipantName}</p>
           </div>
         ))}
       </div>
 
       <div className='container_ChatMessage'>
+        <h3 className='text_NotConversationSelection'>Nenhuma conversa selecionada</h3>
         {selectedChatId && (
           <>
           <ChatMensage chatId={selectedChatId} usuarioLogadoId={usuarioLogadoId} />

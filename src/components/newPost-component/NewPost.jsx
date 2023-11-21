@@ -66,7 +66,10 @@ const Posts = () => {
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                     />
-                    <input type="file" accept="image/*" onChange={handleFileChange} />
+                    <label htmlFor="ImageInput" className="container_InputImg">
+                    <input className="input_postImg" type="file" accept="image/*" onChange={handleFileChange} />
+                   <p>ESCOLHA SUA IMAGEM</p>
+                    </label>
                     <button type="submit">Publicar</button>
                 </form>
 
@@ -82,8 +85,8 @@ const Posts = () => {
                                 {user.photoURL && <img src={post.photoURL} alt="Avatar" key={`${post.postId}_avatar`} />}
                                 <p key={`${post.postId}_displayName`}>{post.displayName}</p>
                             </div>
+                            <p key={`${post.postId}_text`} className="post_Text">{post.text}</p>
                             <img className="image_post" src={post.imageUrl} alt="Publicação" key={`${post.postId}_image`} />
-                            <p key={`${post.postId}_text`}>{post.text}</p>
                         </div>
                     ))}
             </>

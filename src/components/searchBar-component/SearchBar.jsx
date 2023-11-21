@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { db } from '../../services/firebase';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { collection, query, orderBy } from 'firebase/firestore';
+import './searchBar.css'
 
 const SearchBar = ({ onCreateChat }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -33,8 +34,9 @@ const SearchBar = ({ onCreateChat }) => {
   };
 
   return (
-    <div>
+    <div className='container_EntryNameUserSearch'>
       <input
+      className='name_UserSearch'
         type="text"
         placeholder="Digite o nome do usuário"
         value={searchTerm}

@@ -5,10 +5,11 @@
     width: 100%;
     height: 100vh;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .container_Messages {
-    background-color: rgba(77, 77, 77, 0.822);
+    background-color: rgb(77, 77, 77);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -18,6 +19,7 @@
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    z-index: 1;
 
     &::-webkit-scrollbar {
         width: 0px;
@@ -26,6 +28,7 @@
 
 h3{
     color: #ff0000;
+    font-size: 1.4rem;
 }
 
 .message {
@@ -58,11 +61,34 @@ h3{
 .container_NewMessage {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    gap: 2%;
 }
 
 .container_NewMessage>input {
-
+    padding: 1%;
     width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom:1px solid #ff0000;
+    outline: none;
+}
+
+.container_NewMessage  button{
+    background-color: #161616;
+    color: #fff;
+    padding: 2%;
+    width: 20%;
+}
+
+@media screen and (max-width:480px){
+    .message > p{
+        font-size: 1rem;
+    }
+
+    .container_NewMessage>input{
+        font-size: 1.2rem;
+    }
 }
