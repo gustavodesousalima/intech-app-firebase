@@ -1,17 +1,18 @@
-/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../constants/routes'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCompass } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';  
+import { ROUTES } from '../../constants/routes';
 import { useAuth } from '../../context/authContext';
 import './header.css';
 
 const Header = ({ activeTab, onTabChange }) => {
-    const { user, signOut } = useAuth()
+    const { user, signOut } = useAuth();
 
     const handleLogout = () => {
-        signOut()
-    }
+        signOut();
+    };
+
     return (
         <div className="feed-menu">
             <div className="header">
@@ -47,6 +48,11 @@ const Header = ({ activeTab, onTabChange }) => {
             </button>
         </div>
     );
+};
+
+Header.propTypes = {
+    activeTab: PropTypes.string.isRequired,
+    onTabChange: PropTypes.func.isRequired,
 };
 
 export default Header;

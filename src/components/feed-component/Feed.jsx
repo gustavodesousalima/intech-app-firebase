@@ -1,10 +1,9 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Header from '../header-component/Header';
 import './feed.css';
 
-
-const Feed = ({feedContent, profileContent}) => {
+const Feed = ({ feedContent, profileContent, chatContent }) => {
   const [activeTab, setActiveTab] = useState('feed');
 
   const handleTabChange = (tab) => {
@@ -29,12 +28,18 @@ const Feed = ({feedContent, profileContent}) => {
 
         {activeTab === 'explore' && (
           <div className="explore-content">
-
+            {chatContent}
           </div>
         )}
       </div>
     </div>
   );
+};
+
+Feed.propTypes = {
+  feedContent: PropTypes.node,
+  profileContent: PropTypes.node,
+  chatContent: PropTypes.node,
 };
 
 export default Feed;

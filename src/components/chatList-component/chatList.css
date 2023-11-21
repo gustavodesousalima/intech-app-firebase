@@ -1,0 +1,31 @@
+.container_ChatList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container_chatParticipants{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 35%;
+    height: 100vh;
+    gap: 2%;
+    padding: 2%;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+}
+
+.container_chatParticipants div{
+    border: 2px solid red;
+}
+
+.container_ChatMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+}

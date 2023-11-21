@@ -1,0 +1,68 @@
+.container_Chat_Message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.container_Messages {
+    background-color: rgba(77, 77, 77, 0.822);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+h3{
+    color: #ff0000;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px;
+    max-width: 50%;
+    word-wrap: break-word; /* Quebra a palavra para evitar overflow */
+  }
+  
+  .message p {
+    font-size: 0.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    max-width: 100%; /* Alterado para ocupar toda a largura disponível */
+  }
+  
+
+.messageUserLogged {
+    background-color: #161616;
+    border: 1px solid #ff0000;
+    align-self: flex-end;
+}
+
+.messageOtherUser {
+    background-color: #161616;
+    border: 1px solid #fff;
+    align-self: flex-start;
+}
+
+.container_NewMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container_NewMessage>input {
+
+    width: 100%;
+}

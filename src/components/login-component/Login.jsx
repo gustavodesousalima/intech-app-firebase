@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { auth } from '../../services/firebase';
+import { collection, query, orderBy, addDoc } from "firebase/firestore";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { db, auth } from '../../services/firebase';
 import { ROUTES } from '../../constants/routes';
 import { useAuth } from '../../context/authContext';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
@@ -12,20 +14,43 @@ import './login.css';
 const Login = () => {
   const { user, signIn } = useAuth();
 
-  function handleGoogleSignIn() {
+  
+  const postsQuery = query(
+    collection(db, "users"),
+    orderBy("createdAt", "desc")
+  );
+  const [users] = useCollectionData(postsQuery, { idField: "uid" });
+
+  async function handleGoogleSignIn() {
     const provider = new GoogleAuthProvider();
 
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        signIn(result.user);
-      })
-      .catch((error) => {
-        console.log(error);
+    try {
+      const result = await signInWithPopup(auth, provider);
 
-        if (error.message && error.message.includes('net::ERR_INTERNET_DISCONNECTED')) {
-          history.pushState = ROUTES.LOGIN;
-        }
-      });
+     
+      const userExists = users.filter((user) => user.uid === result.user.uid);
+        
+      if (userExists.length === 0) {
+       
+        await addDoc(collection(db, "users"), {
+          uid: result.user.uid,
+          displayName: result.user.displayName,
+          email: result.user.email,
+          createdAt: new Date(),
+          
+        });
+      }
+
+      
+      signIn(result.user);
+
+
+      
+    } catch (error) {
+      console.error(error);
+
+     
+    }
   }
 
   return (
@@ -52,7 +77,7 @@ const Login = () => {
         </div>
       )}
     </div>
-  );
+  )
 };
 
 export default Login;
