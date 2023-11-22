@@ -28,6 +28,9 @@
   width: 100%;
 }
 
-.explore-content{
+.explore-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }

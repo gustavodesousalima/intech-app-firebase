@@ -1,13 +1,12 @@
-.container_ChatList{
+.container_ChatList {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 100vh;
-    margin-bottom: 2%;
 }
 
-.container_chatParticipants{
+.container_chatParticipants {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -16,33 +15,42 @@
     height: 100vh;
     gap: 2%;
     padding: 0%;
-    /* border-top: 2px solid red; */
+    border-top: 2px solid red;
     border-right: 2px solid red;
+    z-index: 1;
 }
 
-.container_chatParticipants div{
-    width: 80%;
+.container_chatParticipants div {
+    text-align: center;
+    width: 90%;
     padding: 2%;
 }
 
-.noClicked{
+.noClicked {
     border: 1px solid #fff;
 }
 
-.clicked{
+.clicked {
     border: 1px solid red;
 }
 
-.container_ChatMessage{
+.container_ChatMessage {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 80vh;
+    z-index: 0;
 }
 
-.text_NotConversationSelection{
+.text_NotConversationSelection {
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    z-index: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+    .container_chatParticipants {
+        width: 100%;
+    }
 }

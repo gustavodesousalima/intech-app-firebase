@@ -1,9 +1,9 @@
-import{ useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { db } from '../../services/firebase';
+import PropTypes from 'prop-types';
 import { collection, doc, query, onSnapshot, addDoc, orderBy } from 'firebase/firestore';
 import './chatMensage.css';
 
-// eslint-disable-next-line react/prop-types
 const ChatMensage = ({ chatId, usuarioLogadoId }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
@@ -29,7 +29,7 @@ const ChatMensage = ({ chatId, usuarioLogadoId }) => {
   }, [chatId]);
 
   useEffect(() => {
-    
+
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
     }
@@ -57,7 +57,7 @@ const ChatMensage = ({ chatId, usuarioLogadoId }) => {
   return (
     <div className='container_Chat_Message'>
       <div className='container_Messages' ref={messagesEndRef}>
-        
+
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.senderId === usuarioLogadoId ? 'messageUserLogged' : 'messageOtherUser'}`}>
             <p>{message.text}</p>
@@ -75,6 +75,12 @@ const ChatMensage = ({ chatId, usuarioLogadoId }) => {
       </div>
     </div>
   );
+
 };
+
+ChatMensage.propTypes = {
+  chatId: PropTypes.number.isRequired,
+  usuarioLogadoId: PropTypes.number.isRequired
+}
 
 export default ChatMensage;

@@ -1,8 +1,9 @@
 import { useAuth } from '../../context/authContext';
 import { useState } from 'react';
 import SearchBar from '../searchBar-component/SearchBar';
+import ButtonChatIsVisible from '../../components/buttonChatIsVisible-component/ButtonChatsIsVisible'
 import ChatList from '../chatList-component/ChatList';
-import { db } from '../../services/firebase'; // Importe a instância do Firebase Firestore
+import { db } from '../../services/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import './chat.css'
 
@@ -43,9 +44,11 @@ const ChatContainer = () => {
 
   return (
     <div className='container_Chat'>
-     
-      <SearchBar onCreateChat={handleCreateChat} />
 
+      <div className='containerSearch'>
+     <ButtonChatIsVisible/>
+      <SearchBar onCreateChat={handleCreateChat} />
+      </div>
       
       {loggedUser && (
         <div className='container_Chat'>

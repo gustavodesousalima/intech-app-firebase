@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faCompass } from '@fortawesome/free-solid-svg-icons';
-import PropTypes from 'prop-types';  
+import { faHome, faUser, faMessage } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 import { ROUTES } from '../../constants/routes';
 import { useAuth } from '../../context/authContext';
 import './header.css';
@@ -44,7 +44,7 @@ const Header = ({ activeTab, onTabChange }) => {
                 className={activeTab === 'explore' ? 'active-tab' : ''}
                 onClick={() => onTabChange('explore')}
             >
-                <FontAwesomeIcon className='icons_menu' icon={faCompass} />
+                <FontAwesomeIcon className='icons_menu' icon={faMessage} />
             </button>
         </div>
     );

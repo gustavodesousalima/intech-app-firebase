@@ -10,13 +10,12 @@ const Posts = () => {
     const [user] = useAuthState(auth);
     const [text, setText] = useState("");
     const [image, setImage] = useState(null);
-
     const postsQuery = query(
         collection(db, "posts"),
         orderBy("createdAt", "desc")
     );
     const [posts] = useCollectionData(postsQuery, { idField: "uid" });
-    
+
     const handleFileChange = (e) => {
         if (e.target.files[0]) {
             setImage(e.target.files[0]);
@@ -31,16 +30,11 @@ const Posts = () => {
             return;
         }
 
-        
         const imageRef = ref(storage, `images/${image.name}`);
         await uploadBytes(imageRef, image);
-
-        
         const imageUrl = await getDownloadURL(imageRef);
-
         const postId = Date.now().toString();
 
-        
         await addDoc(collection(db, "posts"), {
             text,
             imageUrl,
@@ -67,8 +61,8 @@ const Posts = () => {
                         onChange={(e) => setText(e.target.value)}
                     />
                     <label htmlFor="ImageInput" className="container_InputImg">
-                    <input className="input_postImg" type="file" accept="image/*" onChange={handleFileChange} />
-                   <p>ESCOLHA SUA IMAGEM</p>
+                        <input className="input_postImg" type="file" accept="image/*" onChange={handleFileChange} />
+                        <p>ESCOLHA SUA IMAGEM</p>
                     </label>
                     <button type="submit">Publicar</button>
                 </form>
@@ -91,7 +85,6 @@ const Posts = () => {
                     ))}
             </>
         </div>
-
     );
 };
 

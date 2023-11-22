@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
+import PropTypes from 'prop-types';
 import './typerwriter.css'
-// eslint-disable-next-line react/prop-types
+
 const TypewriterComponent = ({ strings }) => {
     const typewriterRef = useRef(null);
 
@@ -19,5 +20,9 @@ const TypewriterComponent = ({ strings }) => {
 
     return <div id="typewriter" />;
 };
+
+TypewriterComponent.propTypes = {
+    strings: PropTypes.string.isRequired
+}
 
 export default TypewriterComponent;

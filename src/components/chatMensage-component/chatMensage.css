@@ -9,7 +9,7 @@
 }
 
 .container_Messages {
-    background-color: rgb(77, 77, 77);
+    background-color: rgb(41, 41, 41);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,7 +26,7 @@
     }
 }
 
-h3{
+h3 {
     color: #ff0000;
     font-size: 1.4rem;
 }
@@ -35,16 +35,15 @@ h3{
     margin-bottom: 10px;
     padding: 8px;
     max-width: 50%;
-    word-wrap: break-word; /* Quebra a palavra para evitar overflow */
-  }
-  
-  .message p {
+    word-wrap: break-word;
+}
+
+.message p {
     font-size: 0.8rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    max-width: 100%; /* Alterado para ocupar toda a largura disponível */
-  }
-  
+    max-width: 100%;
+}
 
 .messageUserLogged {
     background-color: #161616;
@@ -63,32 +62,38 @@ h3{
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    gap: 2%;
+    gap: 5%;
+    padding: 2px 10px;
 }
 
 .container_NewMessage>input {
-    padding: 1%;
-    width: 100%;
+    padding: 2%;
+    width: 90%;
     background: none;
     border: none;
     color: #fff;
-    border-bottom:1px solid #ff0000;
     outline: none;
 }
 
-.container_NewMessage  button{
+.container_NewMessage button {
     background-color: #161616;
     color: #fff;
     padding: 2%;
-    width: 20%;
+    width: 80px;
+    height: 50px;
+    border-radius: 10%;
 }
 
-@media screen and (max-width:480px){
-    .message > p{
+.container_NewMessage button:active {
+    border: 1px solid red;
+}
+
+@media screen and (max-width:480px) {
+    .message>p {
         font-size: 1rem;
     }
 
-    .container_NewMessage>input{
+    .container_NewMessage>input {
         font-size: 1.2rem;
     }
 }

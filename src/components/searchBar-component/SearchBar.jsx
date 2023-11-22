@@ -21,10 +21,10 @@ const SearchBar = ({ onCreateChat }) => {
         
         const user = users.find((user) => user.displayName.toLowerCase() === searchTerm.toLowerCase());
 
-        
-        
         if (user) {
           onCreateChat(user);
+        }else{
+          window.alert('Usuário não encontrado no sistema')
         }
 
       } catch (error) {

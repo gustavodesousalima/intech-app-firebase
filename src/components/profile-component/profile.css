@@ -23,3 +23,9 @@
 .text_Profile {
     color: #c02121;
 }
+
+@media screen and (max-width:480px) {
+    .containerProfile {
+        height: 80vh;
+    }
+}

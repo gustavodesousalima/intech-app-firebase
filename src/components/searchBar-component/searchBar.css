@@ -1,16 +1,16 @@
 .container_EntryNameUserSearch{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 50%;
-    gap: 4%;
+    width: 100%;
+    gap: 10px;
 }
 
 .name_UserSearch{
     background: none;
     border: none;
     border-bottom: 1px solid #ff0000;
-    width: 50%;
+    width: 80%;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
@@ -23,7 +23,7 @@
     border: 1px solid rgb(255, 255, 255);
     color: #ff0000;
     height:auto;
-    padding: 2%;
+    padding: 10px;
 }
 
 .container_EntryNameUserSearch button:active{
@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 480px){
     .container_EntryNameUserSearch{
-        width: 80%;
+        width: 60%;
     }
     
     .name_UserSearch{

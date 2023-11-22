@@ -5,10 +5,10 @@ import { ROUTES } from './constants/routes'
 
 function App() {
   return (
-      <Routes>
-        <Route path={ROUTES.LOGIN} element={<LoginPage />} />
-        <Route path={ROUTES.FEED} element={<FeedPage />} />
-      </Routes>
+    <Routes>
+      <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+      <Route path={ROUTES.FEED} element={<FeedPage />} />
+    </Routes>
   );
 }
 
