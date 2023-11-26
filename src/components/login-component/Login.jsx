@@ -14,7 +14,7 @@ import './login.css';
 const Login = () => {
   const { user, signIn } = useAuth();
 
-  
+
   const postsQuery = query(
     collection(db, "users"),
     orderBy("createdAt", "desc")
@@ -27,29 +27,29 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
 
-     
+
       const userExists = users.filter((user) => user.uid === result.user.uid);
-        
+
       if (userExists.length === 0) {
-       
+
         await addDoc(collection(db, "users"), {
           uid: result.user.uid,
           displayName: result.user.displayName,
           email: result.user.email,
           createdAt: new Date(),
-          
+
         });
       }
 
-      
+
       signIn(result.user);
 
 
-      
+
     } catch (error) {
       console.error(error);
 
-     
+
     }
   }
 

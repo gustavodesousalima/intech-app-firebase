@@ -5,7 +5,7 @@
     width: 100%;
     padding: 1px;
     gap: 5%;
-    border-bottom: 2px solid #c02121;
+    border-bottom: 2px solid #0097B2;
     padding: 0.5rem;
   }
   
@@ -21,6 +21,7 @@
   .user-photo {
     width: 40px;
     height: 40px;
+    border: 2px solid #0097B2;
     border-radius: 50%;
     margin-right: 10px;
   }
@@ -33,7 +34,7 @@
   
   .logout-button {
     text-decoration: none;
-    color: #ff9898;
+    color: #91e6f5;
     border: none;
     padding: 2px 10px;
     cursor: pointer;
@@ -41,7 +42,7 @@
   }
   
   .logout-button:hover {
-    color: #ff4500;
+    color: #00d9ff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -72,8 +73,7 @@
   }
   
   .active-tab {
-    color: #c02121;
-    border: 2px solid #c02121;
+    border: 2px solid #0097B2;
     background-color: #000000;
   }
   

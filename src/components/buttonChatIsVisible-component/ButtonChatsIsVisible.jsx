@@ -7,18 +7,18 @@ const ChatButton = () => {
     const containerChat = document.getElementsByClassName('chat')[0];
 
     if (!isChatVisible) {
-      containerChat.classList.remove('chatIsVisible');
-      containerChat.classList.add('chatIsNotVisible');
-    } else {
       containerChat.classList.remove('chatIsNotVisible');
       containerChat.classList.add('chatIsVisible');
+    } else {
+      containerChat.classList.remove('chatIsVisible');
+      containerChat.classList.add('chatIsNotVisible');
     }
     setIsChatVisible(!isChatVisible);
   };
 
   return (
     <button className='buttonIsVisible' onClick={handleChatParticipant}>
-      <p>{isChatVisible ? 'Abrir chats' : 'Fechar chats'}</p>
+      <p>{isChatVisible ? 'Fechar chats' : 'Abrir chats'}</p>
     </button>
   );
 };

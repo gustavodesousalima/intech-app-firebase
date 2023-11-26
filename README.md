@@ -1,5 +1,7 @@
 # INTECH - Rede Social para Profissionais de Tecnologia
 
+### Link de acesso: https://app-intech.web.app/
+
 ## Descrição do Projeto
 INTECH é uma rede social voltada para profissionais do mundo da tecnologia, proporcionando um espaço dedicado para interação, compartilhamento de projetos, ideias, divulgação de eventos e oportunidades de emprego. Atualmente em fase de desenvolvimento, a plataforma já conta com a funcionalidade básica de publicação de imagens acompanhadas de comentários.
 

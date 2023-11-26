@@ -4,7 +4,13 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+    width: 50%;
     height: auto;
+}
+
+.container_Login>img {
+    width: 30%;
+    height: 4rem;
 }
 
 .user {
@@ -16,23 +22,23 @@
     gap: 12px;
 }
 
-.user > img {
+.user>img {
     width: 120px;
     height: 120px;
     border-radius: 60px;
-    border: 4px solid #c02121;
+    border: 4px solid #0097B2;
     margin: 2%;
 }
 
-.title_Name_User{
+.title_Name_User {
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.button_Entry{
+.button_Entry {
     display: flex;
-    border: 2px solid #c02121;
-    color: #c02121;
+    border: 2px solid #0097B2;
+    color: #0097B2;
     text-decoration: none;
     justify-content: center;
     align-items: center;
@@ -41,8 +47,9 @@
     height: 5vh;
     cursor: pointer;
 }
-.button_Entry:hover{
-    background-color: #c02121;
+
+.button_Entry:hover {
+    background-color: #0097B2;
     color: #000000;
 }
 
@@ -55,14 +62,15 @@
     gap: 15px;
 }
 
-.title_Button{
+.title_Button {
     font-size: 1.2rem;
     font-weight: 600;
+    color: #fff;
 }
 
 .text_Apresentation {
     width: 50%;
-    color: #a3a3a3;
+    color: #fffefe;
     text-align: center;
 }
 
@@ -76,8 +84,9 @@
     height: 6vh;
     cursor: pointer;
 }
+
 .button:hover {
-    border: 2px solid #c02121;
+    border: 2px solid #0097B2;
 }
 
 .link {
@@ -87,21 +96,25 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:480px){
-    .container_Login > img{
-        width: 250px;
-        height: 100px;
+@media screen and (max-width:480px) {
+    .container_Login {
+        width: 80%;
     }
-    
-    .user{
+
+    .container_Login>img {
+        width: 55%;
+        height: 4rem;
+    }
+
+    .user {
         width: 55vw;
     }
 
-    .button_Entry{
+    .button_Entry {
         height: 5vh;
     }
 
-    .text_Apresentation{
+    .text_Apresentation {
         width: 80vw;
     }
 

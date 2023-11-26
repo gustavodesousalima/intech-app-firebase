@@ -17,9 +17,10 @@
     height: 100vh;
     gap: 2%;
     padding: 0%;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid #0097B2;
+    border-right: 2px solid #0097B2;
     z-index: 1;
+    overflow-y: scroll;
 }
 
 .container_chatParticipants div {
@@ -33,7 +34,7 @@
 }
 
 .clicked {
-    border: 1px solid red;
+    border: 2px solid #0097B2;
 }
 
 .container_ChatMessage {

@@ -58,7 +58,7 @@ const ChatList = ({ usuarioLogadoId }) => {
 
   return (
     <div className='container_ChatList'>
-      <div className='container_chatParticipants chat chatIsVisible'>
+      <div className='container_chatParticipants chat chatIsNotVisible '>
           <h3>Chats</h3>
           {chats.map((chat) => (
             <div className={`participant ${chat.id === selectedChatId ? 'clicked' : 'noClicked'}`} key={chat.id} onClick={() => { handleChatClick(chat.id); handleElementClick(chat.id) }} style={{ cursor: 'pointer' }}>

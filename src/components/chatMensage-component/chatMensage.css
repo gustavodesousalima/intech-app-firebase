@@ -27,8 +27,8 @@
 }
 
 h3 {
-    color: #ff0000;
-    font-size: 1.4rem;
+    color: #0097B2;
+    font-size: 1.2rem;
 }
 
 .message {
@@ -47,7 +47,7 @@ h3 {
 
 .messageUserLogged {
     background-color: #161616;
-    border: 1px solid #ff0000;
+    border: 1px solid #0097B2;
     align-self: flex-end;
 }
 
@@ -67,6 +67,7 @@ h3 {
 }
 
 .container_NewMessage>input {
+    font-size: 1rem;
     padding: 2%;
     width: 90%;
     background: none;
@@ -76,16 +77,22 @@ h3 {
 }
 
 .container_NewMessage button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #161616;
-    color: #fff;
+    color: #0097B2;
     padding: 2%;
     width: 80px;
     height: 50px;
+    border: 2px solid #0097B2;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .container_NewMessage button:active {
-    border: 1px solid red;
+    color: #07c6e7;
+    border: 2px solid #07c6e7;
 }
 
 @media screen and (max-width:480px) {
